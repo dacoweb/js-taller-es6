@@ -1,6 +1,6 @@
 import './../favicon.ico';
 import './../scss/global.scss';
 
-import {controllerGame} from './controllers/GameController';
+import ControllerGame from './controllers/GameController';
 
-window.addEventListener('load', controllerGame);
+window.addEventListener('load', () => new ControllerGame());

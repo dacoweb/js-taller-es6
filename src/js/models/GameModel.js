@@ -4,6 +4,7 @@ export default class GameModel {
         this.numBoxItems = numBoxItems;
         this.numMatchs = numMatchs;
         this.rows = []
+        this.last_item_value = null;
     }
 
     getLimitOfLetters() {
@@ -46,5 +47,9 @@ export default class GameModel {
             
             this.rows.push({items: items});
         }        
+    }
+
+    getItemValueFrom(row_idx, item_idx) {
+        return this.rows[row_idx].items[item_idx];
     }
 }
